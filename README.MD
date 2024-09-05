@@ -1,24 +1,22 @@
 # Google Drive Downloader
 
-This package provides utility functions for interacting with Google Drive files. It includes functions to download files from Google Drive and extract file IDs from Google Drive URLs.
+`google-drive-downloader` is a library for interacting with Google Drive files. It includes functions to download files from Google Drive and extract file IDs from Google Drive URLs.
 
 ## Installation
 
-To use this package in your Node.js project, follow these steps:
+To install the library, you can use npm:
 
-1. **Install the package via npm**:
+```bash
+npm install google-drive-downloader
+```
 
-   ```bash
-   npm install google-drive-downloader
-   ```
+Or with yarn:
 
-2. **Import the functions in your code**:
+```bash
+yarn add google-drive-downloader
+```
 
-   ```javascript
-   import { getFileIdFromUrl, downloadFile } from 'google-drive-downloader'
-   ```
-
-## Functions
+## Usage
 
 ### `getFileIdFromUrl`
 
@@ -39,11 +37,11 @@ Extracts the file ID from a Google Drive URL.
 #### Example
 
 ```javascript
-import { getFileIdFromUrl } from 'google-drive-downloader'
+import { getFileIdFromUrl } from 'google-drive-downloader';
 
-const url = 'https://drive.google.com/file/d/1CwGEerIO-bunXA0e_yXySEmKNuSECytW/view?usp=sharing'
-const fileId = getFileIdFromUrl(url)
-console.log(fileId) // Outputs: 1CwGEerIO-bunXA0e_yXySEmKNuSECytW
+const url = 'https://drive.google.com/file/d/1CwGEerIO-bunXA0e_yXySEmKNuSECytW/view?usp=sharing';
+const fileId = getFileIdFromUrl(url);
+console.log(fileId); // Outputs: 1CwGEerIO-bunXA0e_yXySEmKNuSECytW
 ```
 
 ### `downloadFile`
@@ -68,16 +66,16 @@ Downloads a file from Google Drive and saves it to the specified directory with 
 #### Example
 
 ```javascript
-import { downloadFile } from 'google-drive-downloader'
+import { downloadFile } from 'google-drive-downloader';
 
-const fileId = '1CwGEerIO-bunXA0e_yXySEmKNuSECytW'
-const dirPath = './downloads'
-const filename = 'myfile'
-const extension = 'pdf'
+const fileId = '1CwGEerIO-bunXA0e_yXySEmKNuSECytW';
+const dirPath = './downloads';
+const filename = 'myfile';
+const extension = 'pdf';
 
 downloadFile(fileId, dirPath, filename, extension)
-  .then((filePath) => console.log(`File downloaded and saved to: ${filePath}`))
-  .catch((error) => console.error('Download failed:', error))
+  .then(filePath => console.log(`File downloaded and saved to: ${filePath}`))
+  .catch(error => console.error('Download failed:', error));
 ```
 
 ## Contributing
@@ -86,4 +84,4 @@ Contributions are welcome. Please open an issue or a pull request on GitHub to d
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
