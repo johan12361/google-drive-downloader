@@ -1,7 +1,6 @@
 {
   "name": "googlegrive-downloader",
   "version": "0.0.1",
-  "description": "",
   "main": "index.js",
   "type": "module",
   "types": "index.d.ts",
@@ -12,7 +11,15 @@
     "eslint-config-prettier": "9.1.0",
     "standard": "17.1.0"
   },
-  "keywords": ["googlegrive-downloader", "drive", "google", "google drive", "drive download", "drive downloader"],
+  "keywords": [
+    "googlegrive-downloader",
+    "drive",
+    "google",
+    "google drive",
+    "drive download",
+    "drive downloader"
+  ],
   "author": "Johan S",
-  "license": "MIT"
+  "license": "MIT",
+  "description": "This project provides utility functions for interacting with Google Drive files. It includes functions to download files from Google Drive and extract file IDs from Google Drive URLs."
 }

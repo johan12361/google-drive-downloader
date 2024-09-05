@@ -1,22 +1,26 @@
-# Google Drive Downloader
+# Google Drive File Downloader
 
-This package provides utility functions for interacting with Google Drive files. It includes functions to download files from Google Drive and extract file IDs from Google Drive URLs.
+This project provides utility functions for interacting with Google Drive files. It includes functions to download files from Google Drive and extract file IDs from Google Drive URLs.
 
 ## Installation
 
-To use this package in your Node.js project, follow these steps:
+To use these utilities in your Node.js project, follow these steps:
 
-1. **Install the package via npm**:
+1. **Clone the repository** (if applicable):
 
    ```bash
-   npm install google-drive-downloader
+   git clone https://github.com/your-username/google-drive-file-downloader.git
    ```
-````
 
-2. **Import the functions in your code**:
+2. **Navigate to the project directory**:
 
-   ```javascript
-   import { getFileIdFromUrl, downloadFile } from 'google-drive-downloader'
+   ```bash
+   cd google-drive-file-downloader
+   ```
+
+3. **Install dependencies**:
+   ```bash
+   npm install
    ```
 
 ## Functions
@@ -40,7 +44,7 @@ Extracts the file ID from a Google Drive URL.
 #### Example
 
 ```javascript
-import { getFileIdFromUrl } from 'google-drive-downloader'
+import { getFileIdFromUrl } from './path/to/your/module'
 
 const url = 'https://drive.google.com/file/d/1CwGEerIO-bunXA0e_yXySEmKNuSECytW/view?usp=sharing'
 const fileId = getFileIdFromUrl(url)
@@ -69,7 +73,7 @@ Downloads a file from Google Drive and saves it to the specified directory with 
 #### Example
 
 ```javascript
-import { downloadFile } from 'google-drive-downloader'
+import { downloadFile } from './path/to/your/module'
 
 const fileId = '1CwGEerIO-bunXA0e_yXySEmKNuSECytW'
 const dirPath = './downloads'
