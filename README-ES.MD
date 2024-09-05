@@ -1,79 +1,72 @@
-# Google Drive File Downloader
+# Google Drive Downloader
 
-This project provides utility functions for interacting with Google Drive files. It includes functions to download files from Google Drive and extract file IDs from Google Drive URLs.
+`google-drive-downloader` es una biblioteca para interactuar con archivos de Google Drive. Incluye funciones para descargar archivos de Google Drive y extraer IDs de archivos de URLs de Google Drive.
 
-## Installation
+## Instalación
 
-To use these utilities in your Node.js project, follow these steps:
+Para instalar la biblioteca, puedes usar npm:
 
-1. **Clone the repository** (if applicable):
+```bash
+npm install google-drive-downloader
+```
 
-   ```bash
-   git clone https://github.com/your-username/google-drive-file-downloader.git
-   ```
+O con yarn:
 
-2. **Navigate to the project directory**:
+```bash
+yarn add google-drive-downloader
+```
 
-   ```bash
-   cd google-drive-file-downloader
-   ```
-
-3. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-
-## Functions
+## Uso
 
 ### `getFileIdFromUrl`
 
-Extracts the file ID from a Google Drive URL.
+Extrae el ID del archivo de una URL de Google Drive.
 
-#### Parameters
+#### Parámetros
 
-- `url` (`string`): The Google Drive URL from which to extract the file ID.
+- `url` (`string`): La URL de Google Drive de la que se debe extraer el ID del archivo.
 
-#### Returns
+#### Retorna
 
-- `string`: The extracted file ID.
+- `string`: El ID del archivo extraído.
 
-#### Throws
+#### Lanza
 
-- `Error` if the provided URL is not a valid string or if the file ID cannot be extracted from the URL.
+- `Error` si la URL proporcionada no es una cadena válida o si el ID del archivo no puede ser extraído de la URL.
 
-#### Example
+#### Ejemplo
 
 ```javascript
-import { getFileIdFromUrl } from './path/to/your/module'
+import { getFileIdFromUrl } from 'google-drive-downloader'
 
 const url = 'https://drive.google.com/file/d/1CwGEerIO-bunXA0e_yXySEmKNuSECytW/view?usp=sharing'
 const fileId = getFileIdFromUrl(url)
-console.log(fileId) // Outputs: 1CwGEerIO-bunXA0e_yXySEmKNuSECytW
+console.log(fileId) // Muestra: 1CwGEerIO-bunXA0e_yXySEmKNuSECytW
 ```
 
 ### `downloadFile`
 
-Downloads a file from Google Drive and saves it to the specified directory with a given filename and extension.
+Descarga un archivo de Google Drive y lo guarda en el directorio especificado con el nombre de archivo y la extensión dados.
 
-#### Parameters
+#### Parámetros
 
-- `fileId` (`string`): The ID of the file to download from Google Drive.
-- `dirPath` (`string`): The directory path where the file should be saved.
-- `filename` (`string`): The base name of the file (excluding the extension).
-- `extension` (`string`): The file extension (e.g., 'pdf', 'jpg').
+- `fileId` (`string`): El ID del archivo que se debe descargar de Google Drive.
+- `dirPath` (`string`): La ruta del directorio donde se debe guardar el archivo.
+- `filename` (`string`): El nombre base del archivo (sin incluir la extensión).
+- `extension` (`string`): La extensión del archivo (por ejemplo, 'pdf', 'jpg').
 
-#### Returns
+#### Retorna
 
-- `Promise<string | null>`: A promise that resolves to the full path of the saved file on success, or `null` if an error occurs.
+- `Promise<string | null>`: Una promesa que se resuelve con la ruta completa del archivo guardado en caso de éxito, o `null` si ocurre un error.
 
-#### Throws
+#### Lanza
 
-- `Error` if the provided parameters are invalid or if an error occurs during the download or save process.
+- `Error` si los parámetros proporcionados son inválidos o si ocurre un error durante el proceso de descarga o guardado.
 
-#### Example
+#### Ejemplo
 
 ```javascript
-import { downloadFile } from './path/to/your/module'
+import { downloadFile } from 'google-drive-downloader'
 
 const fileId = '1CwGEerIO-bunXA0e_yXySEmKNuSECytW'
 const dirPath = './downloads'
@@ -81,14 +74,14 @@ const filename = 'myfile'
 const extension = 'pdf'
 
 downloadFile(fileId, dirPath, filename, extension)
-  .then((filePath) => console.log(`File downloaded and saved to: ${filePath}`))
-  .catch((error) => console.error('Download failed:', error))
+  .then((filePath) => console.log(`Archivo descargado y guardado en: ${filePath}`))
+  .catch((error) => console.error('Error en la descarga:', error))
 ```
 
-## Contributing
+## Contribuciones
 
-Contributions are welcome. Please open an issue or a pull request on GitHub to discuss any changes or improvements.
+Las contribuciones son bienvenidas. Por favor, abre un problema o una solicitud de extracción en GitHub para discutir cualquier cambio o mejora.
 
-## License
+## Licencia
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE.md) para más detalles.
