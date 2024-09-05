@@ -49,8 +49,7 @@ import { getFileIdFromUrl } from './path/to/your/module'
 const url = 'https://drive.google.com/file/d/1CwGEerIO-bunXA0e_yXySEmKNuSECytW/view?usp=sharing'
 const fileId = getFileIdFromUrl(url)
 console.log(fileId) // Outputs: 1CwGEerIO-bunXA0e_yXySEmKNuSECytW
-
-````
+```
 
 ### `downloadFile`
 
@@ -84,21 +83,8 @@ const extension = 'pdf'
 downloadFile(fileId, dirPath, filename, extension)
   .then((filePath) => console.log(`File downloaded and saved to: ${filePath}`))
   .catch((error) => console.error('Download failed:', error))
-````
-
+```
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-
-```
-
-### Explanation:
-- **Installation Instructions**: Guides users on how to set up the project.
-- **Function Documentation**: Details on how to use `getFileIdFromUrl` and `downloadFile`, including parameters, return values, and example usage.
-- **Dependencies**: Lists the dependencies required for the project.
-- **License and Contact Information**: Provides information on licensing and how to contact you for support.
-
-Feel free to customize it further based on your project's specifics.
-```
