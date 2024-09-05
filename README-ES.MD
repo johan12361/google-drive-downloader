@@ -1,19 +1,19 @@
 # Google Drive Downloader
 
-`google-drive-downloader` es una biblioteca para interactuar con archivos de Google Drive. Incluye funciones para descargar archivos de Google Drive y extraer IDs de archivos de URLs de Google Drive.
+`simple-googledrive-downloader` es una biblioteca para interactuar con archivos de Google Drive. Incluye funciones para descargar archivos de Google Drive y extraer IDs de archivos de URLs de Google Drive.
 
 ## Instalación
 
 Para instalar la biblioteca, puedes usar npm:
 
 ```bash
-npm install google-drive-downloader
+npm install simple-googledrive-downloader
 ```
 
 O con yarn:
 
 ```bash
-yarn add google-drive-downloader
+yarn add simple-googledrive-downloader
 ```
 
 ## Uso
