@@ -1,5 +1,5 @@
 {
-  "name": "googledrive-downloader",
+  "name": "google-drive-downloader",
   "version": "0.0.1",
   "main": "index.js",
   "type": "module",
@@ -12,7 +12,7 @@
     "standard": "17.1.0"
   },
   "keywords": [
-    "googledrive-downloader",
+    "google-drive-downloader",
     "drive",
     "google",
     "google drive",
