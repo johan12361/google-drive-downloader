@@ -1,6 +1,28 @@
 import fs from 'fs'
 import path from 'path'
-
+/**
+ * Downloads a file from Google Drive and saves it to the specified directory with a given filename and extension.
+ *
+ * This function constructs a download URL for the file using its Google Drive file ID, fetches the file content,
+ * and writes it to the local file system. It ensures the directory exists before saving the file.
+ *
+ * @param {string} fileId - The ID of the file to download from Google Drive.
+ * @param {string} dirPath - The directory path where the file should be saved.
+ * @param {string} filename - The base name of the file (excluding the extension).
+ * @param {string} extension - The extension of the file (e.g., 'pdf', 'jpg').
+ * @returns {Promise<string|null>} A promise that resolves to the full path of the saved file on success, or `null` if an error occurs.
+ *
+ * @throws {Error} Throws an error if the provided parameters are invalid or if an error occurs during the download or save process.
+ *
+ * @example
+ * const fileId = '1CwGEerIO-bunXA0e_yXySEmKNuSECytW';
+ * const dirPath = './downloads';
+ * const filename = 'myfile';
+ * const extension = 'pdf';
+ * downloadFile(fileId, dirPath, filename, extension)
+ *   .then(filePath => console.log(`File downloaded and saved to: ${filePath}`))
+ *   .catch(error => console.error('Download failed:', error));
+ */
 export async function downloadFile(fileId, dirPath, filename, extension) {
   if (!fileId || typeof fileId !== 'string') {
     console.error('Invalid fileId provided')
