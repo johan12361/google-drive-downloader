@@ -1,5 +1,5 @@
 {
-  "name": "googlegrive-downloader",
+  "name": "googledrive-downloader",
   "version": "0.0.1",
   "main": "index.js",
   "type": "module",
@@ -12,7 +12,7 @@
     "standard": "17.1.0"
   },
   "keywords": [
-    "googlegrive-downloader",
+    "googledrive-downloader",
     "drive",
     "google",
     "google drive",
