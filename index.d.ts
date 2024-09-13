@@ -1,5 +1,5 @@
 // index.d.ts
-declare module 'googlegrive-downloader' {
+declare module 'simple-googledrive-downloader' {
   /**
    * Downloads a file from Google Drive and saves it to the specified directory with a given filename and extension.
    *
